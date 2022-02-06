@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_portal/login.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
             Column(
               children: <Widget>[
                 Text(
-                  "Welcome to your portal",
+                  "Welcome",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -37,7 +38,7 @@ class HomePage extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "something here",
+                  "Salim Habib University Student's Portal",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.grey[700],
@@ -49,8 +50,28 @@ class HomePage extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height / 3,
               decoration: BoxDecoration(
-                  image:
-                      DecorationImage(image: AssetImage("assets/welcome.png"))),
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/welcome.png"))),
+            ),
+            Column(
+              children: <Widget>[
+                MaterialButton(
+                  minWidth: double.infinity,
+                  height: 60,
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginPage()));
+                  },
+                  // defining the shaoe
+                  shape: RoundedRectangleBorder(
+                      side: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.circular(50)),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                  ),
+                )
+              ],
             )
           ],
         ),
