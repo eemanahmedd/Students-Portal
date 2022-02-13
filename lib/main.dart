@@ -62,12 +62,12 @@ class HomePage extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoginPage()));
                   },
-                  // defining the shaoe
+                  // defining the shape
                   shape: RoundedRectangleBorder(
                       side: BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(50)),
                   child: Text(
-                    "Login",
+                    "Lets get started! ",
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
                   ),
                 )

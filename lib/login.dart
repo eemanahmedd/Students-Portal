@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_portal/edit_profile.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -71,9 +72,14 @@ class LoginPage extends StatelessWidget {
                             right: BorderSide(color: Colors.black),
                           )),
                       child: MaterialButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EditProfilePage()));
+                        },
                         minWidth: double.infinity,
                         height: 60,
-                        onPressed: () {},
                         color: Color(0xff0095ff),
                         elevation: 0,
                         shape: RoundedRectangleBorder(
